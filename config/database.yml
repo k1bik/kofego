@@ -1,2 +1,2 @@
 development:
-  url: <%= ENV.fetch("DATABASE_URL") { "postgresql://development:development@localhost:5432/kofego_development" } %>
+  url: <%= ENV["DATABASE_URL"] %>
