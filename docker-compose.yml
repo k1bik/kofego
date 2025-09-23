@@ -1,0 +1,18 @@
+services:
+  postgresql:
+    container_name: "kofego_postgresql"
+    hostname: "kofego_postgresql"
+    image: postgres:16.1
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=development
+      - POSTGRES_PASSWORD=development
+      - POSTGRES_DB=kofego_development
+    volumes:
+      - "/var/run/postgres/postgres.sock:/var/run/postgres/postgres.sock"
+      - "dbdata:/var/lib/postgresql/data"
+
+volumes:
+  dbdata:
