@@ -17,8 +17,13 @@ group :development, :test do
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
   gem "dotenv"
   gem "tapioca",  "~> 0.17", require: false
+  gem "rspec-rails", "~> 8.0.0"
 end
 
 group :development do
   gem "web-console"
+end
+
+group :test do
+  gem "rails-controller-testing"
 end
