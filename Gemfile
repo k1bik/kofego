@@ -11,10 +11,12 @@ gem "jbuilder"
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "bootsnap", require: false
 gem "tailwindcss-rails", "~> 4.3"
+gem "sorbet-static-and-runtime"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
   gem "dotenv"
+  gem "tapioca",  "~> 0.17", require: false
 end
 
 group :development do
