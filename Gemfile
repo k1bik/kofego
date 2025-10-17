@@ -12,6 +12,7 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "bootsnap", require: false
 gem "tailwindcss-rails", "~> 4.3"
 gem "sorbet-static-and-runtime"
+gem "inline_svg"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"

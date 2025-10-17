@@ -1,0 +1,42 @@
+<div class="navbar bg-base-100 shadow-sm">
+  <div class="container mx-auto flex">
+
+    <div class="navbar-start">
+      <%= link_to "KofeGo", root_path, class: "text-xl font-bold" %>
+    </div>
+
+    <div class="navbar-end gap-4">
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+          <%= inline_svg "icons/bars-3-bottom-left.svg" %>
+        </div>
+        <ul tabindex="-1" class="menu dropdown-content bg-base-100 rounded-box z-1 mt-3 w-max p-2 shadow gap-2">
+          <li>
+            <a class="flex items-center gap-2">
+              <%= inline_svg "icons/user.svg", class: "!size-5" %>
+              <%= t("profile") %>
+            </a>
+          </li>
+          <li>
+            <a class="flex items-center gap-2">
+              <%= inline_svg "icons/arrow-right-end-on-rectangle.svg", class: "!size-5" %>
+              <%= t("logout") %>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <label class="toggle text-base-content" data-controller="theme">
+        <input
+          type="checkbox"
+          class="theme-controller"
+          data-theme-target="toggle"
+          data-action="change->theme#toggle"
+        />
+        <%= inline_svg "icons/sun.svg" %>
+        <%= inline_svg "icons/moon.svg" %>
+      </label>
+    </div>
+
+  </div>
+</div>
