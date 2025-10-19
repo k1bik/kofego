@@ -22,8 +22,9 @@
   <body class="bg-base-300 h-screen">
     <%= render "shared/header" %>
 
-    <p><%= notice %></p>
-    <p><%= alert %></p>
+    <turbo-frame id="flash">
+      <%= render "shared/flash" %>
+    </turbo-frame>
 
     <main class="container mx-auto">
       <%= yield %>
