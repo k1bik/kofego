@@ -1,0 +1,18 @@
+<div class="flex items-center justify-center mt-12">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <fieldset class="fieldset bg-base-100 rounded-box w-md p-4">
+      <legend class="fieldset-legend text-xl"><%= t("login") %></legend>
+
+      <%= f.label :email, t("email"), class: "label" %>
+      <%= f.email_field :email, autofocus: true, class: "input w-full", placeholder: t("email") %>
+
+      <%= f.label :password, t("password"), class: "label" %>
+      <%= f.password_field :password, class: "input w-full", placeholder: t("password") %>
+
+      <%= f.submit t("login"), class: "btn btn-neutral mt-4" %>
+
+      <%= render "devise/shared/links" %>
+    </fieldset>
+  <% end %>
+</div>
+

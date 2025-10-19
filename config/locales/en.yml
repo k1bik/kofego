@@ -1,3 +1,13 @@
 en:
   logout: "Logout"
   profile: "Profile"
+  name: "Name"
+  login: "Login"
+  email: "Email"
+  password: "Password"
+  password_confirmation: "Password confirmation"
+  sign_up: "Sign up"
+  forgot_password: "Forgot your password?"
+  characters_minimum: "characters minimum"
+  already_have_account: "Already have an account? Log in."
+  do_not_have_account: "Don’t have an account? Sign up."

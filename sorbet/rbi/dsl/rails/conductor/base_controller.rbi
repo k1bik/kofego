@@ -26,6 +26,7 @@ class Rails::Conductor::BaseController
     include ::Importmap::ImportmapTagsHelper
     include ::ActionController::Base::HelperMethods
     include ::ApplicationHelper
+    include ::DeviseHelper
   end
 
   class HelperProxy < ::ActionView::Base

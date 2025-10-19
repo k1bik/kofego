@@ -13,12 +13,14 @@ gem "bootsnap", require: false
 gem "tailwindcss-rails", "~> 4.3"
 gem "sorbet-static-and-runtime"
 gem "inline_svg"
+gem "devise"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
   gem "dotenv"
   gem "tapioca",  "~> 0.17", require: false
-  gem "rspec-rails", "~> 8.0.0"
+  gem "rspec-rails"
+  gem "factory_bot_rails"
 end
 
 group :development do
@@ -27,4 +29,5 @@ end
 
 group :test do
   gem "rails-controller-testing"
+  gem "shoulda-matchers"
 end
