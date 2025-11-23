@@ -2,6 +2,7 @@ en:
   logout: Logout
   profile: Profile
   employees: Employees
+  roles: Roles
   name: Name
   login: Login
   email: Email

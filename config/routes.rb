@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   root "home#index"
 
-  resources :employees
-  resources :roles
+  scope module: :iam do
+    resources :employees
+    resources :roles
+  end
 end
