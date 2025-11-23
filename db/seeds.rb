@@ -7,3 +7,8 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+puts "creating required roles..."
+Users::Role.find_or_create_by!(name: Users::Role::ADMIN)
+Users::Role.find_or_create_by!(name: Users::Role::STAFF)
+puts "required roles successfully created!"

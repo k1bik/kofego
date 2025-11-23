@@ -1,14 +1,13 @@
 ru:
-  logout: "Выйти"
-  profile: "Профиль"
-  name: "Имя"
-  login: "Вход"
-  email: "Электронная почта"
-  password: "Пароль"
-  password_confirmation: "Подтверждение пароля"
-  sign_up: "Регистрация"
-  forgot_password: "Забыли пароль?"
-  characters_minimum: "символов минимум"
-  already_have_account: "Уже есть аккаунт? Войти."
-  do_not_have_account: "Нет аккаунта? Зарегистрироваться."
-
+  logout: Выйти
+  profile: Профиль
+  name: Имя
+  login: Вход
+  email: Электронная почта
+  password: Пароль
+  password_confirmation: Подтверждение пароля
+  sign_up: Регистрация
+  forgot_password: Забыли пароль?
+  characters_minimum: символов минимум
+  already_have_account: Уже есть аккаунт? Войти.
+  do_not_have_account: Нет аккаунта? Зарегистрироваться.

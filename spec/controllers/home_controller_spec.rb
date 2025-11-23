@@ -1,10 +1,10 @@
 require "rails_helper"
 
 RSpec.describe HomeController, type: :controller do
-  let!(:user) { create(:user) }
+  include_context :users_context
 
   describe "GET #index" do
-    before { sign_in user }
+    before { sign_in admin_user }
 
     it "returns a success response" do
       get :index
