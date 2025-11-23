@@ -1,9 +1,9 @@
 RSpec.shared_context :users_context do
   # roles
   let!(:admin_role) { create(:role, :admin) }
-  let!(:staff_role) { create(:role, :staff) }
+  let!(:employee_role) { create(:role, :employee) }
 
   # users
   let!(:admin_user) { create(:user, role: admin_role) }
-  let!(:staff_user) { create(:user, role: staff_role) }
+  let!(:employee_user) { create(:user, role: employee_role) }
 end

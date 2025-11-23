@@ -1,6 +1,6 @@
 # typed: strict
 
-module Users
+module Iam
   class RegistrationsController < Devise::RegistrationsController
     extend T::Sig
     include Devise::Controllers::Helpers
@@ -14,16 +14,17 @@ module Users
       devise_parameter_sanitizer.permit(:sign_up, keys: %i[name])
     end
 
+    sig { params(hash: T.untyped).void }
     def build_resource(hash = {})
       super
 
-      first_user = Users::Record.count.zero?
+      first_user = Iam::User.count.zero?
 
       resource.role =
         if first_user
-          Users::Role.find_by!(name: Users::Role::ADMIN)
+          Iam::Role.find_by!(name: Iam::Role::ADMIN)
         else
-          Users::Role.find_by!(name: Users::Role::STAFF)
+          Iam::Role.find_by!(name: Iam::Role::EMPLOYEE)
         end
     end
   end

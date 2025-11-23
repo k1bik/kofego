@@ -1,6 +1,7 @@
 en:
   logout: Logout
   profile: Profile
+  employees: Employees
   name: Name
   login: Login
   email: Email

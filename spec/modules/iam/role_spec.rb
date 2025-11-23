@@ -1,10 +1,10 @@
 require "rails_helper"
 
-RSpec.describe Users::Role, type: :model do
+RSpec.describe Iam::Role, type: :model do
   subject { build(:role) }
 
   describe "associations" do
-    it { should have_many(:users).class_name("Users::Record").with_foreign_key("role_id") }
+    it { should have_many(:users).class_name("Iam::User").with_foreign_key("role_id") }
   end
 
   describe "validations" do

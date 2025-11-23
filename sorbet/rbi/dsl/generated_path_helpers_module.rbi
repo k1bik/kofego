@@ -16,16 +16,34 @@ module GeneratedPathHelpersModule
   def destroy_user_session_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
+  def edit_employee_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_role_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def edit_user_password_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def edit_user_registration_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
+  def employee_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def employees_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_employee_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def new_rails_conductor_inbound_email_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def new_rails_conductor_inbound_email_source_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_role_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def new_user_password_path(*args); end
@@ -116,6 +134,12 @@ module GeneratedPathHelpersModule
 
   sig { params(args: T.untyped).returns(String) }
   def rails_storage_redirect_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def role_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def roles_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def root_path(*args); end

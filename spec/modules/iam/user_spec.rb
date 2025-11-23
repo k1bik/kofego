@@ -1,12 +1,12 @@
 require "rails_helper"
 
-RSpec.describe Users::Record, type: :model do
+RSpec.describe Iam::User, type: :model do
   include_context :users_context
 
   subject { admin_user }
 
   describe "associations" do
-    it { should belong_to(:role).class_name("Users::Role").required }
+    it { should belong_to(:role).class_name("Iam::Role").required }
   end
 
   describe "validations" do
@@ -31,13 +31,13 @@ RSpec.describe Users::Record, type: :model do
 
   describe "#strip_whitespace" do
     it "strips whitespace from the name before saving" do
-      user = create(:user, name: " Test user ", role: staff_role)
+      user = create(:user, name: " Test user ", role: employee_role)
 
       expect(user.name).to eq("Test user")
     end
 
     it "strips whitespace from the email before saving" do
-      user = create(:user, email: "  test@example.com ", role: staff_role)
+      user = create(:user, email: "  test@example.com ", role: employee_role)
 
       expect(user.email).to eq("test@example.com")
     end

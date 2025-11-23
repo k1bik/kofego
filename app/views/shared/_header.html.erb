@@ -12,6 +12,14 @@
             <%= inline_svg "icons/bars-3-bottom-left.svg" %>
           </div>
           <ul tabindex="-1" class="menu dropdown-content bg-base-100 rounded-box z-1 mt-3 w-max shadow gap-2">
+            <% if current_user.admin? %>
+              <li>
+                <a class="flex items-center gap-2">
+                  <%= inline_svg "icons/users.svg", class: "!size-5" %>
+                  <%= t("employees") %>
+                </a>
+              </li>
+            <% end %>
             <li>
               <a class="flex items-center gap-2">
                 <%= inline_svg "icons/user.svg", class: "!size-5" %>
