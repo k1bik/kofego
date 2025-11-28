@@ -3,3 +3,4 @@ RSpec.configure do |config|
 end
 
 require "./spec/modules/iam/factories.rb"
+require "./spec/modules/iam/roles/factories.rb"

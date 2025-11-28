@@ -14,13 +14,13 @@
           <ul tabindex="-1" class="menu dropdown-content bg-base-100 rounded-box z-1 mt-3 w-max shadow gap-2">
             <% if current_user.admin? %>
               <li>
-                <%= link_to employees_path, class: "flex items-center gap-2" do %>
+                <%= link_to employees_index_path, class: "flex items-center gap-2" do %>
                   <%= inline_svg "icons/users.svg", class: "!size-5" %>
                   <%= t("employees") %>
                 <% end %>
               </li>
               <li>
-                <%= link_to roles_path, class: "flex items-center gap-2" do %>
+                <%= link_to iam_roles_index_path, class: "flex items-center gap-2" do %>
                   <%= inline_svg "icons/server-stack.svg", class: "!size-5" %>
                   <%= t("roles") %>
                 <% end %>

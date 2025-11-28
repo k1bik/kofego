@@ -16,34 +16,52 @@ module GeneratedUrlHelpersModule
   def destroy_user_session_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
-  def edit_employee_url(*args); end
-
-  sig { params(args: T.untyped).returns(String) }
-  def edit_role_url(*args); end
-
-  sig { params(args: T.untyped).returns(String) }
   def edit_user_password_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def edit_user_registration_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
-  def employee_url(*args); end
+  def employees_create_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
-  def employees_url(*args); end
+  def employees_edit_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
-  def new_employee_url(*args); end
+  def employees_index_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def employees_new_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def employees_show_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def employees_update_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def iam_roles_create_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def iam_roles_edit_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def iam_roles_index_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def iam_roles_new_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def iam_roles_show_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def iam_roles_update_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def new_rails_conductor_inbound_email_source_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def new_rails_conductor_inbound_email_url(*args); end
-
-  sig { params(args: T.untyped).returns(String) }
-  def new_role_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def new_user_password_url(*args); end
@@ -53,6 +71,12 @@ module GeneratedUrlHelpersModule
 
   sig { params(args: T.untyped).returns(String) }
   def new_user_session_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def preview_view_component_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def preview_view_components_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def rails_blob_representation_proxy_url(*args); end
@@ -134,12 +158,6 @@ module GeneratedUrlHelpersModule
 
   sig { params(args: T.untyped).returns(String) }
   def rails_storage_redirect_url(*args); end
-
-  sig { params(args: T.untyped).returns(String) }
-  def role_url(*args); end
-
-  sig { params(args: T.untyped).returns(String) }
-  def roles_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def root_url(*args); end

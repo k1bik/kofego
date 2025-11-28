@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe Iam::Role, type: :model do
+RSpec.describe Iam::Roles::Record, type: :model do
   subject { build(:role) }
 
   describe "associations" do

@@ -6,7 +6,7 @@ RSpec.describe Iam::User, type: :model do
   subject { admin_user }
 
   describe "associations" do
-    it { should belong_to(:role).class_name("Iam::Role").required }
+    it { should belong_to(:role).class_name("Iam::Roles::Record").required }
   end
 
   describe "validations" do

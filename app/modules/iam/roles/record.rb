@@ -1,7 +1,7 @@
 # typed: strict
 
-module Iam
-  class Role < ApplicationRecord
+module Iam::Roles
+  class Record < ApplicationRecord
     extend T::Sig
     include StripAttributes
 

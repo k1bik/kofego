@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe HomeController, type: :controller do
+RSpec.describe Iam::Roles::WebController, type: :controller do
   include_context :users_context
 
   describe "GET #index" do
@@ -10,7 +10,6 @@ RSpec.describe HomeController, type: :controller do
       get :index
 
       expect(response).to be_successful
-      expect(response).to render_template(:index)
     end
   end
 end

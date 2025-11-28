@@ -391,25 +391,25 @@ class Iam::User
   end
 
   module GeneratedAssociationMethods
-    sig { params(args: T.untyped, blk: T.untyped).returns(::Iam::Role) }
+    sig { params(args: T.untyped, blk: T.untyped).returns(::Iam::Roles::Record) }
     def build_role(*args, &blk); end
 
-    sig { params(args: T.untyped, blk: T.untyped).returns(::Iam::Role) }
+    sig { params(args: T.untyped, blk: T.untyped).returns(::Iam::Roles::Record) }
     def create_role(*args, &blk); end
 
-    sig { params(args: T.untyped, blk: T.untyped).returns(::Iam::Role) }
+    sig { params(args: T.untyped, blk: T.untyped).returns(::Iam::Roles::Record) }
     def create_role!(*args, &blk); end
 
-    sig { returns(T.nilable(::Iam::Role)) }
+    sig { returns(T.nilable(::Iam::Roles::Record)) }
     def reload_role; end
 
     sig { void }
     def reset_role; end
 
-    sig { returns(T.nilable(::Iam::Role)) }
+    sig { returns(T.nilable(::Iam::Roles::Record)) }
     def role; end
 
-    sig { params(value: T.nilable(::Iam::Role)).void }
+    sig { params(value: T.nilable(::Iam::Roles::Record)).void }
     def role=(value); end
 
     sig { returns(T::Boolean) }

@@ -12,14 +12,14 @@ module Iam
 
     strip_attributes :name, :email
 
-    belongs_to :role, class_name: "Iam::Role"
+    belongs_to :role, class_name: "Iam::Roles::Record"
 
     validates :name, presence: true, length: { maximum: 255 }
     validates :email, presence: true, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP }
 
     sig { returns(T::Boolean) }
     def admin?
-      T.must(role).name == Iam::Role::ADMIN
+      T.must(role).name == Iam::Roles::Record::ADMIN
     end
   end
 end

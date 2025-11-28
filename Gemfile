@@ -14,6 +14,7 @@ gem "tailwindcss-rails", "~> 4.3"
 gem "sorbet-static-and-runtime"
 gem "inline_svg"
 gem "devise"
+gem "view_component"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"

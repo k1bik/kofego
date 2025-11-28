@@ -5,10 +5,22 @@ Rails.application.routes.draw do
 
   get "up" => "rails/health#show", as: :rails_health_check
 
-  root "home#index"
+  root "home/web#index"
 
-  scope module: :iam do
-    resources :employees
-    resources :roles
+  def web_resource(resource_name)
+    namespace resource_name, controller: :web do
+      get :index
+      get :new
+      post :create
+      get "edit/:id", action: :edit, as: :edit
+      patch "update/:id", to: "web#update", as: :update
+      get ":id", action: :show, as: :show
+    end
+  end
+
+  web_resource :employees
+
+  namespace :iam, controller: :web do
+    web_resource :roles
   end
 end

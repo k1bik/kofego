@@ -9,6 +9,6 @@
 #   end
 
 puts "creating required roles..."
-Iam::Role.find_or_create_by!(name: Iam::Role::ADMIN)
-Iam::Role.find_or_create_by!(name: Iam::Role::EMPLOYEE)
+Iam::Roles::Record.find_or_create_by!(name: Iam::Roles::Record::ADMIN)
+Iam::Roles::Record.find_or_create_by!(name: Iam::Roles::Record::EMPLOYEE)
 puts "required roles successfully created!"

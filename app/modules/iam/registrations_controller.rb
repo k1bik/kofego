@@ -22,9 +22,9 @@ module Iam
 
       resource.role =
         if first_user
-          Iam::Role.find_by!(name: Iam::Role::ADMIN)
+          Iam::Roles::Record.find_by!(name: Iam::Roles::Record::ADMIN)
         else
-          Iam::Role.find_by!(name: Iam::Role::EMPLOYEE)
+          Iam::Roles::Record.find_by!(name: Iam::Roles::Record::EMPLOYEE)
         end
     end
   end

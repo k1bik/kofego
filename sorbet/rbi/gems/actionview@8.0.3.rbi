@@ -10,6 +10,8 @@ class ActionController::Base < ::ActionController::Metal
   include ::ActionController::Head
   include ::AbstractController::Caching::ConfigMethods
   include ::ActionController::BasicImplicitRender
+  include ::Devise::Controllers::SignInOut
+  include ::Devise::Controllers::StoreLocation
   extend ::AbstractController::Helpers::Resolution
 end
 
@@ -387,6 +389,7 @@ class ActionView::Base
   include ::ActionView::Helpers::RenderingHelper
   include ::ActionView::Helpers
   include ::ActionCable::Helpers::ActionCableHelper
+  include ::Devise::Controllers::UrlHelpers
   extend ::ActionView::Helpers::UrlHelper::ClassMethods
   extend ::ActionView::Helpers::SanitizeHelper::ClassMethods
 
