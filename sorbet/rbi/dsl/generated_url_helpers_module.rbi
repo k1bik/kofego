@@ -25,6 +25,9 @@ module GeneratedUrlHelpersModule
   def employees_create_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
+  def employees_destroy_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def employees_edit_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
@@ -41,6 +44,9 @@ module GeneratedUrlHelpersModule
 
   sig { params(args: T.untyped).returns(String) }
   def iam_roles_create_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def iam_roles_destroy_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def iam_roles_edit_url(*args); end

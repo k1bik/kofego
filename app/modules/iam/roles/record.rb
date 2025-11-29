@@ -20,5 +20,20 @@ module Iam::Roles
 
     validates :name, presence: true, length: { maximum: 255 }, uniqueness: { case_sensitive: false }
     validates :system_type, inclusion: { in: SYSTEM_TYPES }, allow_nil: true
+    before_destroy :ensure_not_system
+
+    sig { returns(T::Boolean) }
+    def system?
+      system_type.present?
+    end
+
+    private
+
+    sig { void }
+    def ensure_not_system
+      return unless system?
+
+      throw(:abort)
+    end
   end
 end

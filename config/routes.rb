@@ -15,6 +15,7 @@ Rails.application.routes.draw do
       get "edit/:id", action: :edit, as: :edit
       patch "update/:id", to: "web#update", as: :update
       get ":id", action: :show, as: :show
+      delete ":id", action: :destroy, as: :destroy
     end
   end
 

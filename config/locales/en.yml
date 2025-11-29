@@ -13,3 +13,11 @@ en:
   characters_minimum: characters minimum
   already_have_account: Already have an account? Log in.
   do_not_have_account: Don’t have an account? Sign up.
+  edit: Edit
+  destroy: Destroy
+  title: Title
+  actions: Actions
+  cannot_destroy_system_role: Cannot destroy system role
+  cannot_destroy_role_with_users: Cannot destroy role with users, first replace the role of the users with another role
+  confirm_message: Are you sure you want to do this?
+  success_notice: Action successfully completed

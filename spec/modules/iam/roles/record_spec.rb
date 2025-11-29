@@ -24,4 +24,18 @@ RSpec.describe Iam::Roles::Record, type: :model do
       expect(user.name).to eq("Test role")
     end
   end
+
+  describe "#ensure_not_system" do
+    it "raises an error if trying to delete a system role" do
+      role = create(:role, system_type: :admin)
+
+      expect { role.destroy! }.to raise_error(ActiveRecord::RecordNotDestroyed)
+    end
+
+    it "deletes a non-system role" do
+      role = create(:role, system_type: nil)
+
+      expect { role.destroy! }.to change { Iam::Roles::Record.count }.by(-1)
+    end
+  end
 end

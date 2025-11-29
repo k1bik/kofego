@@ -1,0 +1,39 @@
+<div class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100 mt-4 w-1/2 mx-auto">
+  <table class="table">
+    <thead>
+      <tr>
+        <th></th>
+        <th><%= t("title") %></th>
+        <th><%= t("actions") %></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @roles.each_with_index do |role, index| %>
+        <tr id="role-row-<%= role.id %>">
+          <th><%= index + 1 %></th>
+          <td class="w-2/5 break-all"><%= role.name %></td>
+          <td>
+            <%= link_to t("edit"), iam_roles_edit_path(role), class: "btn btn-primary btn-xs" %>
+
+            <% if role.system? %>
+              <div class="tooltip" data-tip="<%= t("cannot_destroy_system_role") %>">
+                <button disabled class="btn btn-error btn-xs"><%= t("destroy") %></button>
+              </div>
+            <% elsif role.users.any? %>
+              <div class="tooltip" data-tip="<%= t("cannot_destroy_role_with_users") %>">
+                <button disabled class="btn btn-error btn-xs"><%= t("destroy") %></button>
+              </div>
+            <% else %>
+              <%= link_to t("destroy"),
+                iam_roles_destroy_path(role),
+                data: { turbo_confirm: t("confirm_message"), turbo_method: :delete },
+                class: "btn btn-error btn-xs"
+              %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

@@ -25,6 +25,9 @@ module GeneratedPathHelpersModule
   def employees_create_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
+  def employees_destroy_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def employees_edit_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
@@ -41,6 +44,9 @@ module GeneratedPathHelpersModule
 
   sig { params(args: T.untyped).returns(String) }
   def iam_roles_create_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def iam_roles_destroy_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def iam_roles_edit_path(*args); end
