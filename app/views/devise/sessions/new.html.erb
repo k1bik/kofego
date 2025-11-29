@@ -1,5 +1,5 @@
 <div class="flex items-center justify-center mt-12">
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: false }) do |f| %>
     <fieldset class="fieldset bg-base-100 rounded-box w-md p-4">
       <legend class="fieldset-legend text-xl"><%= t("login") %></legend>
 
