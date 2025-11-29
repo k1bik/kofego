@@ -16,6 +16,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_11_23_154031) do
 
   create_table "roles", force: :cascade do |t|
     t.string "name", null: false
+    t.string "system_type"
     t.index ["name"], name: "index_roles_on_name", unique: true
   end
 

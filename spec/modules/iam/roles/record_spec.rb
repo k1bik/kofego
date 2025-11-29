@@ -13,6 +13,10 @@ RSpec.describe Iam::Roles::Record, type: :model do
     it { is_expected.to validate_uniqueness_of(:name).case_insensitive }
   end
 
+  describe "enums" do
+    it { is_expected.to define_enum_for(:system_type).with_values({admin: "admin", employee: "employee"}).backed_by_column_of_type(:string) }
+  end
+
   describe "#strip_whitespace" do
     it "strips whitespace from the name before saving" do
       user = create(:role, name: " Test role ")

@@ -19,7 +19,7 @@ module Iam
 
     sig { returns(T::Boolean) }
     def admin?
-      T.must(role).name == Iam::Roles::Record::ADMIN
+      T.must(role).system_type == Iam::Roles::Record::ADMIN
     end
   end
 end
